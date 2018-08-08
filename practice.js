@@ -123,7 +123,17 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 //Code Here
 
+function divider(arr){
+  var even=[]
+  var odd=[]
+  var divided=[even,odd]
 
+  arr.forEach(
+    function assign(element){if(element%2===0){even.push(element)}
+  else if(element%2===1){odd.push(element)}}
+  )
+  return divided
+}
 
 ////////// PROBLEM 7 //////////
 
@@ -144,7 +154,11 @@ var getRandomArbitrary = function() {
 
 //Code Here
 
-
+function finder(arr){
+  num =getRandomArbitrary()
+    for(i=0;i<arr.length;i++){if(arr[i]===num){return true}}
+  return false
+}
 
 ////////// PROBLEM 8 //////////
 
@@ -173,7 +187,26 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 
+function removeItem(arr,item){
 
+  if(arr && item){
+  let num = arr.indexOf(item)
+  arr.splice(num,1)
+  return arr
+}
+return []
+}
+
+function addItem(arr,item){
+if(item){
+  if(arr){
+  arr.push(item)
+  return arr
+}
+return []
+}
+return []
+}
 
 ////////// PROBLEM 9 //////////
 
@@ -183,7 +216,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Code Here
 
-
+function maker(){
+  arr=[]
+  for(i=1;i<=215;i++){
+    arr.push(i)
+  }
+  return arr
+}
 
 ////////// PROBLEM 10 //////////
 
@@ -199,7 +238,13 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   
 //Code Here
 
-
+function addTen(arr){
+  for(i=0;i<arr.length;i++){
+    let num = parseInt(arr[i])
+    arr[i] = num+=10
+  }
+  return arr
+}
 
 ////////// PROBLEM 11 //////////
 
@@ -224,7 +269,10 @@ for(var i = 0; i < num2; i++){
 
 //Code Here
 
-
+function longer(arr1,arr2){
+  if(arr1.length>arr2.length){return arr1}
+  else{return arr2}
+}
 
 /*
   As a continuation of the previous problem, write another function called 'both'.
@@ -276,7 +324,10 @@ var colt = {
 
 //Code Here
 
-
+devMountainEmployees[0] =tyler
+devMountainEmployees[1] =cahlan
+devMountainEmployees[2] =ryan
+devMountainEmployees[3] =colt
 
 /*
   Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
@@ -285,7 +336,13 @@ var colt = {
 
 //Code Here
 
-
+function leave(arr){
+  for(i=0;i<arr.length;i++){
+    if(arr[i]===cahlan){   //*************************************************/
+      arr.splice(arr[i],1)
+    }
+  }
+}
 
 ////////// PROBLEM 13 //////////
 
@@ -294,9 +351,11 @@ var colt = {
   A very clean way to pass around large LISTS (arrays) of COLLECTIONS (objects) of Data is to have an Array full of objects. 
   Create an empty array called users.
 */
-
+var users = []
 //Code Here
-
+users[0] = {name: 'Tyler McGinnis',email: 'tylermcginnis33@gmail.com',password: 'iLoveJavaScript',username: 'infiniteLoop'};
+users[1] = {name:'2',email:'2',password:'2',username:'2'}
+users[2] = {name:'3',email:'3',password:'3',username:'3'}
 
 
 /*
@@ -329,6 +388,11 @@ var user1 = {
 */
 
 //Code Here
+function deleteAccount(arr){
+  arr.forEach(function(item){
+    if(item.email === 'tylermcginnis33@gmail.com'){arr.splice(arr.item,1)}
+    })
+}
 
 
 
